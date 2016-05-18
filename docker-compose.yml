@@ -1,0 +1,13 @@
+version: '2'
+services:
+  db:
+    restart: always
+    build: .
+    container_name: db
+    image: postgis-sfcgal:latest
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: edf
+      POSTGRES_PASSWORD: edf
+      POSTGRES_DB: edf
